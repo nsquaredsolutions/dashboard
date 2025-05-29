@@ -22,7 +22,7 @@ To control the dashboard from the web portal you will need to register the produ
 
 Layout files can be added. You can download layouts (.layout) files and add them from the Settings panel.
 
-> [Layouts available to download](./Docs/Layouts/Index)
+> [Layouts available to download](./Docs/Layouts/Index.md)
 
 ⭐Coming soon⭐
 > Information on creating your own layouts
@@ -33,7 +33,7 @@ Layout files can be added. You can download layouts (.layout) files and add them
 
 Additional components can be installed on the licensed version of nsquared dashboard.
 
-> [Components available to download](./Docs/Components/Index)
+> [Components available to download](./Docs/Components/Index.md)
 
 ⭐Coming soon⭐
 > Instructions on how to build your own components.
