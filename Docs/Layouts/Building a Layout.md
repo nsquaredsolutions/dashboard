@@ -73,9 +73,9 @@ This guide will walk you through the process of creating your own layout for the
 10. Add the required properties and methods to the `Layout` class
 
     ```cs
-    public string Name => "Sample Layout";
-    
-    public List<IComponent> Components { get; } = new List<IComponent>();
+    public string Name { get; set; } = "Simple Layout";
+
+    public List<IComponent> Components { get; set; } = new List<IComponent>();
 
     public void Load()
     {
@@ -92,10 +92,12 @@ For this SampleLayout we will create a simple background component that displays
 11. Create a new Avalonia UserControl named `BackgroundComponentControl.axaml` in the project folder.
 
     ```xml
-    <UserControl xmlns="https://github.com/AvaloniaUI"
-                 x:Class="SimpleLayout.BackgroundComponentControl"
-                 d:DesignWidth="400"
-                 d:DesignHeight="300">
+    <UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SimpleLayout.BackgroundComponentControl">
         <Grid>
             <Rectangle Fill="LinearGradientBrush(0,0,0,1,GradientStops={GradientStop(0,Color.FromArgb(255,255,255,255)),GradientStop(1,Color.FromArgb(255,0,0,0))})"/>
         </Grid>
@@ -106,9 +108,9 @@ For this SampleLayout we will create a simple background component that displays
 
     ```csharp
     using Avalonia.Controls;
-    using Avalonia.Markup.Xaml;
+    namespace SimpleLayout;
 
-    public class BackgroundComponentControl : UserControl
+    public partial class BackgroundComponentControl : UserControl
     {
         public BackgroundComponentControl()
         {
