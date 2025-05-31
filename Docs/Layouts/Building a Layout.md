@@ -98,9 +98,16 @@ For this SampleLayout we will create a simple background component that displays
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SimpleLayout.BackgroundComponentControl">
-        <Grid>
-            <Rectangle Fill="LinearGradientBrush(0,0,0,1,GradientStops={GradientStop(0,Color.FromArgb(255,255,255,255)),GradientStop(1,Color.FromArgb(255,0,0,0))})"/>
-        </Grid>
+        <UserControl.Background>
+            <LinearGradientBrush StartPoint="50%,0%" EndPoint="50%,100%">
+                <GradientStop Color="#7C2BFF" Offset="0.0"/>
+                <GradientStop Color="#87FF9D" Offset="0.5"/>
+                <GradientStop Color="#7C2BFF" Offset="1.0"/>
+            </LinearGradientBrush>
+        </UserControl.Background>
+        <Canvas VerticalAlignment="Center" HorizontalAlignment="Center" >
+            <Polyline Points="0,0 65,0 78,-26 91,39 104,-39 117,13 130,0 195,0" Stroke="Brown" Canvas.Left="0" Canvas.Top="0"/>
+        </Canvas>
     </UserControl>
     ```
 
@@ -136,6 +143,23 @@ For this SampleLayout we will create a simple background component that displays
         public ComponentHorizontalAlignment HorizontalAlignment { get; set; }
         public Dictionary<string, string>? Parameters { get; set; }
 
+        public BackgroundComponent()
+        {
+            VerticalAlignment = ComponentVerticalAlignment.Stretch;
+            HorizontalAlignment = ComponentHorizontalAlignment.Stretch;
+            Margin = new ComponentMargin
+            {
+                Top = 0,
+                Left = 0,
+                Bottom = 0,
+                Right = 0
+            };
+            Size = new ComponentSize
+            {
+                Width = 1920,
+                Height = 1080
+            };
+        }
     }
     ```
 

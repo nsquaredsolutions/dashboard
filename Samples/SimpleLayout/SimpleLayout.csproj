@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.3.0" />
+    <PackageReference Include="Avalonia" Version="11.2.3" />
     <PackageReference Include="nsquared.dashboard.api" Version="0.0.146.12420-alpha" />
   </ItemGroup>
 

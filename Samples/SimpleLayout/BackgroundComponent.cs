@@ -11,4 +11,21 @@ public class BackgroundComponent : IComponent
     public ComponentHorizontalAlignment HorizontalAlignment { get; set; }
     public Dictionary<string, string>? Parameters { get; set; }
 
+    public BackgroundComponent()
+    {
+        VerticalAlignment = ComponentVerticalAlignment.Stretch;
+        HorizontalAlignment = ComponentHorizontalAlignment.Stretch;
+        Margin = new ComponentMargin
+        {
+            Top = 0,
+            Left = 0,
+            Bottom = 0,
+            Right = 0
+        };
+        Size = new ComponentSize
+        {
+            Width = 1920,
+            Height = 1080
+        };
+    }
 }
