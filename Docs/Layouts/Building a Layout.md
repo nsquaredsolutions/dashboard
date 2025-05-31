@@ -188,6 +188,40 @@ Your project structure should look like this:
 - Add your layout to the nsquared dashboard layouts
 - Test your layout in the nsquared dashboard application
 
+Build the layout project using the following command:
+
+```sh
+dotnet build
+```
+
+This will compile your layout and create a `.Layout` file in the output directory.
+
+Run nsquared dashboard and add your layout from the Settings panel.
+
+Open the layout settings in the nsquared dashboard Settings.
+![Open Layout Settings](../images/SettingsEditLayouts.png)
+
+Click on the "Add Layout" button
+![Add Layout](../images/AddLayoutButton.png)
+
+Find the `SimpleLayout.Layout` file in the file dialog and Open it.
+
+![Select Layout File](../images/AddNewLayout.png)
+
+As the Layout is not signed you will be asked if you trust it. You only just created this layout so you trust it, click Yes.
+
+![Trust Layout](../images/TrustLayout.png)
+
+You should now see your layout in the list of available layouts.
+
+![Layout List](../images/LayoutLoaded.png)
+
+Close the panel and select your new layout from the Layout dropdown in the Settings panel.
+
+![Select Layout](../images/SelectLayout.png)
+
+The new layout should now be displayed in the dashboard.
+
 ### 8. Tips and Best Practices
 
 - Use the [SimpleLayout project](https://github.com/nsquaredsolutions/dashboard/tree/main//Samples/SimpleLayout) as a reference
