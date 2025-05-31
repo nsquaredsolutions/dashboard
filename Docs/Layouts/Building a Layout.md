@@ -83,6 +83,69 @@ This guide will walk you through the process of creating your own layout for the
     }
     ```
 
+A layout is a collection of components that define how the dashboard will be displayed. Each layout must implement the `ILayout` interface, which requires a `Name`, a list of `Components`, and a `Load()` method to initialize the components.
+
+A component is a reusable UI element that can be added to a layout. Each component must implement the `IComponent` interface, which defines properties such as `AssemblyFile`, `TypeName`, `Margin`, `Size`, `Alignment`, and `Parameters`.
+
+For this SampleLayout we will create a simple background component that displays a gradient background.
+
+11. Create a new Avalonia UserControl named `BackgroundComponentControl.axaml` in the project folder.
+
+    ```xml
+    <UserControl xmlns="https://github.com/AvaloniaUI"
+                 x:Class="SimpleLayout.BackgroundComponentControl"
+                 d:DesignWidth="400"
+                 d:DesignHeight="300">
+        <Grid>
+            <Rectangle Fill="LinearGradientBrush(0,0,0,1,GradientStops={GradientStop(0,Color.FromArgb(255,255,255,255)),GradientStop(1,Color.FromArgb(255,0,0,0))})"/>
+        </Grid>
+    </UserControl>
+    ```
+
+12. Create a code-behind file for the `BackgroundComponentControl.axaml` named `BackgroundComponentControl.axaml.cs`.
+
+```csharp
+    using Avalonia.Controls;
+    using Avalonia.Markup.Xaml;
+
+    public class BackgroundComponentControl : UserControl
+    {
+        public BackgroundComponentControl()
+        {
+            InitializeComponent();
+        }
+    }
+
+    ```
+
+13. Create a new class named `BackgroundComponent.cs` that implements the `IComponent` interface.
+
+    ```csharp
+    using nsquared.dashboard.api;
+
+    public class BackgroundComponent : IComponent
+    {
+        public string AssemblyFile => "SimpleLayout.Layout";
+        public string TypeName => "SimpleLayout.BackgroundComponentControl";
+        public string Name { get; } = "Simple Layout";
+        public ComponentMargin Margin { get; set; }
+        public ComponentSize Size { get; set; }
+        public ComponentVerticalAlignment VerticalAlignment { get; set; }
+        public ComponentHorizontalAlignment HorizontalAlignment { get; set; }
+        public Dictionary<string, string>? Parameters { get; set; }
+
+    }
+    ```
+
+14. In the `Layout.cs` file, add a new component to the `Load()` method.
+
+    ```csharp
+    public void Load()
+    {
+        Components.Add(new BackgroundComponent());
+    }
+    ```
+
 ### 3. Project Structure
 
 - Main layout XAML file (e.g., `MainLayout.axaml`)
