@@ -104,7 +104,7 @@ For this SampleLayout we will create a simple background component that displays
 
 12. Create a code-behind file for the `BackgroundComponentControl.axaml` named `BackgroundComponentControl.axaml.cs`.
 
-```csharp
+    ```csharp
     using Avalonia.Controls;
     using Avalonia.Markup.Xaml;
 
