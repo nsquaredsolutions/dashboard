@@ -12,7 +12,7 @@ This guide will walk you through the process of creating your own layout for the
 ### 2. Project Setup
 
 - Create a new folder for your layout
-- Add a new Class Library project (e.g., `MyLayout`)
+- Add a new Class Library project (e.g., `SimpleLayout`)
 - Reference `nsquared.dashboard.api` nuget package in your project
 - Add Avalonia NuGet package
 
