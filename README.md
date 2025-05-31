@@ -24,7 +24,7 @@ Layout files can be added. You can download layouts (.layout) files and add them
 
 > [Layouts available to download](./Docs/Layouts/Index.md)
 
-> [Information on creating your own layouts](./Docs/Layouts/Building%20a%20Layout.md)
+> [Information on creating your own layouts](./Docs/Layouts/Building%20a%20Layout)
 
 ---
 
