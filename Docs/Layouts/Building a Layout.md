@@ -1,4 +1,4 @@
-# Building a Layout for nsquared Dashboard
+# Building a Layout for nsquared dashboard
 
 This guide will walk you through the process of creating your own layout for the nsquared dashboard, using the [`SimpleLayout` project](https://github.com/nsquaredsolutions/dashboard/tree/main//Samples/SimpleLayout) as a reference. Follow these steps to build a layout from scratch.
 
