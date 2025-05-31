@@ -1,21 +1,87 @@
 # Building a Layout for nsquared Dashboard
 
-This guide will walk you through the process of creating your own layout for the nsquared dashboard, using the `ExampleExternalLayout` project as a reference. Follow these steps to build a layout from scratch.
+This guide will walk you through the process of creating your own layout for the nsquared dashboard, using the `SampleLayout` project as a reference. Follow these steps to build a layout from scratch.
 
 ## Outline
 
 ### 1. Prerequisites
 
 - Basic knowledge of C# and XAML (Avalonia UI)
-- Visual Studio or compatible IDE
 - .NET SDK installed
 
 ### 2. Project Setup
 
 - Create a new folder for your layout
-- Add a new Class Library project (e.g., `MyCustomLayout`)
+- Add a new Class Library project (e.g., `MyLayout`)
 - Reference `nsquared.dashboard.api` nuget package in your project
-- Add Avalonia NuGet package 
+- Add Avalonia NuGet package
+
+1. Start by creating a new C# class library project named SimpleLayout.
+
+   ```bash
+    dotnet new classlib --name SimpleLayout
+   ```
+
+   This will create a new folder named SimpleLayout containing C# project named SimpleLayout, and a code file named Class1.cs.
+
+2. Rename the file `Class1.cs` to `Layout.cs`
+3. Rename the class in the code to `Layout`
+
+   ```cs
+    namespace SimpleLayout;
+    public class Layout
+    {
+    }
+   ```
+
+4. In the `SimpleLayout.csproj` file make sure the `TargetFramework` is `net8.0`
+
+   ```xml
+    <TargetFramework>net8.0</TargetFramework>
+   ```
+
+5. In the `SimpleLayout.csproj` file add a `TargetExt` field below the `TargetFramework` line
+
+   ```xml
+    <TargetExt>.Layout</TargetExt>
+   ```
+
+6. Add a package reference to the `nsquared.dashboard.api` NuGet package, from PowerShell you can do this with the following command.
+
+   ```sh
+   dotnet add package nsquared.dashboard.api
+   ```
+
+7. Add a package reference to the `Avalonia` NuGet package, from PowerShell you can do this with the following command.
+
+   ```sh
+   dotnet add package Avalonia
+   ```
+
+8. In the `Layout.cs` file add a `using` to import the `nsquared.dashboard.api` namespace
+
+   ```cs
+    using nsquared.dashboard.api;
+   ```
+
+9. In the `Layout.cs` file implement the `ILayout` interface in the Layout class
+
+   ```cs
+    public class Layout : ILayout
+   ```
+
+10. Add the required properties and methods to the `Layout` class
+
+    ```cs
+    public string Name => "Sample Layout";
+    
+    public List<IComponent> Components { get; } = new List<IComponent>();
+
+    public void Load()
+    {
+        // Load components here
+    }
+    ```
 
 ### 3. Project Structure
 
