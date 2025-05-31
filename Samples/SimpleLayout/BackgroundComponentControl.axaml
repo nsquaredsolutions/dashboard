@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SimpleLayout.BackgroundComponentControl">
+   <UserControl.Background>
+		<LinearGradientBrush StartPoint="50%,0%" EndPoint="50%,100%">
+			<GradientStop Color="#7C2BFF" Offset="0.0"/>
+			<GradientStop Color="#87FF9D" Offset="0.5"/>
+			<GradientStop Color="#7C2BFF" Offset="1.0"/>
+		</LinearGradientBrush>
+	</UserControl.Background>
+	<Canvas VerticalAlignment="Center" HorizontalAlignment="Center" >
+		<Polyline Points="0,0 65,0 78,-26 91,39 104,-39 117,13 130,0 195,0" Stroke="Brown" Canvas.Left="0" Canvas.Top="0"/>
+	</Canvas>
+</UserControl>
