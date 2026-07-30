@@ -7,7 +7,7 @@ This guide will walk you through the process of creating your own layout for the
 ### 1. Prerequisites
 
 - Basic knowledge of C# and XAML (Avalonia UI)
-- .NET SDK installed
+- .NET 10 SDK installed
 
 ### 2. Project Setup
 
@@ -34,10 +34,10 @@ This guide will walk you through the process of creating your own layout for the
     }
    ```
 
-4. In the `SimpleLayout.csproj` file make sure the `TargetFramework` is `net8.0`
+4. In the `SimpleLayout.csproj` file make sure the `TargetFramework` is `net10.0`
 
    ```xml
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
    ```
 
 5. In the `SimpleLayout.csproj` file add a `TargetExt` field below the `TargetFramework` line

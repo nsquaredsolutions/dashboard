@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <TargetExt>.Layout</TargetExt>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.2.3" />
-    <PackageReference Include="nsquared.dashboard.api" Version="0.0.146.12420-alpha" />
+    <PackageReference Include="Avalonia" Version="11.3.18" />
+    <PackageReference Include="nsquared.dashboard.api" Version="0.0.164.21576-alpha" />
   </ItemGroup>
 
 </Project>
