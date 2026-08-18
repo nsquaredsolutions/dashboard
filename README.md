@@ -24,7 +24,7 @@ Layout files can be added. You can download layouts (.layout) files and add them
 
 > [Layouts available to download](./Docs/Layouts/Index.md)
 
-> [Information on creating your own layouts](./Docs/Layouts/Building%20a%20Layout.md)
+> [Information on creating your own layouts](./Docs/Layouts/Building%20a%20Layout)
 
 ---
 
@@ -34,5 +34,4 @@ Additional components can be installed on the licensed version of nsquared dashb
 
 > [Components available to download](./Docs/Components/Index.md)
 
-⭐⭐⭐ Coming Soon ⭐⭐⭐
-> Information on creating your own components
+[Information on creating your own components](./Docs/Components/Building%20a%20Component)

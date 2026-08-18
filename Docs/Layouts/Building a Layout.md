@@ -230,4 +230,4 @@ The new layout should now be displayed in the dashboard.
 
 ---
 
-_Next steps: Follow each section in detail to implement your own layout._
+For information on building a component to host in your layout read [creating your own components](/Docs/Components/Building%20a%20Component)
