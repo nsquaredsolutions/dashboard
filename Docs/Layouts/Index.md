@@ -17,4 +17,6 @@ The layouts on this page have been built by nsquared and digitally signed so you
 > Note: to see the clocks in the world map you will need to install the [Clocks component](../Components/Index.md)
 
 
-[Information on creating your own layouts](./Building%20a%20Layout)
+[Information on creating your own layouts](./Building%20a%20Layout.md)
+
+[Information on hosting a component in a layout](./Hosting%20a%20Component%20in%20a%20Layout.md)
