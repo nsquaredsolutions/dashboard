@@ -1,0 +1,13 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="320" d:DesignHeight="160"
+             x:Class="SimpleComponent.ClockComponentControl">
+    <Border Background="#121826" CornerRadius="18" Padding="20">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Current Time" Foreground="White" FontSize="18" FontWeight="SemiBold"/>
+            <TextBlock Text="10:25 AM" Foreground="#87FF9D" FontSize="40" FontWeight="Bold"/>
+        </StackPanel>
+    </Border>
+</UserControl>
