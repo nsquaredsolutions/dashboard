@@ -150,30 +150,7 @@ public partial class ClockComponentControl : UserControl
 }
 ```
 
-### 4. Add the Component to a Layout
-
-A custom layout will add an instance of your component to its `Components` list in the `Load()` method. This is the same pattern used by the `SimpleLayout` sample project.
-
-```cs
-using nsquared.dashboard.api;
-
-namespace SimpleLayout;
-
-public class Layout : ILayout
-{
-    public string Name { get; set; } = "Simple Layout";
-    public List<IComponent> Components { get; set; } = new List<IComponent>();
-
-    public void Load()
-    {
-        Components.Add(new ClockComponent());
-    }
-}
-```
-
-The layout owns the collection, while the component describes the appearance and sizing metadata for its UI control.
-
-### 5. Project Structure
+### 4. Project Structure
 
 Your project structure should look like this:
 
@@ -182,7 +159,7 @@ Your project structure should look like this:
 - Component implementation class (for example, `ClockComponent.cs`)
 - Project file (`.csproj`)
 
-### 6. Building and Testing
+### 5. Building and Testing
 
 - Build your project to generate the `SimpleComponent.Component` assembly
 - Install or load the component in the nsquared dashboard application using the licensed component flow
@@ -196,9 +173,13 @@ dotnet build
 
 This will compile the project and generate a `.Component` file in the output directory.
 
-Once the `.Component` file is built, add it to the dashboard using the same component installation flow used for other custom components. Then add that component to a layout and verify the visual result.
+Once the `.Component` file is built, add it to the dashboard using the same component installation flow used for other custom components. 
 
-### 7. Tips and Best Practices
+Then add that component to a layout and verify the visual result.
+
+[Information on hosting a component in a layout](/Docs/Layouts/Hosting%20a%20Component%20in%20a%20Layout.md)
+
+### 6. Tips and Best Practices
 
 - Keep components small and focused on one task or visual purpose
 - Reuse the `SimpleLayout` sample as a reference for how layouts load and host components
@@ -207,4 +188,6 @@ Once the `.Component` file is built, add it to the dashboard using the same comp
 
 ---
 
-For information on building a layout to host your component read [creating your own layouts](/Docs/Layouts/Building%20a%20Layout)
+[For more information on building a layout](/Docs/Layouts/Building%20a%20Layout)
+
+[Information on hosting a component in a layout](/Docs/Layouts/Hosting%20a%20Component%20in%20a%20Layout.md)
