@@ -8,6 +8,6 @@ The components on this page have been built by nsquared and digitally signed so 
 
 [![Clocks Component](../images/ClocksComponent.png)](https://nsquaredorders.blob.core.windows.net/downloads/nsquared.clocks.Component)
 
-> Note: the clocks is used in the [World Map Layout](../Layouts/Index.md)
+> Note: the clocks is used in the [World Map Layout](../Layouts/Index)
 
-[Information on creating your own components](./Building%20a%20Component.md)
+[Information on creating your own components](./Building%20a%20Component)
