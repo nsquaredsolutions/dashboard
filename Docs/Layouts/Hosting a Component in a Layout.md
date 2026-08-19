@@ -2,6 +2,11 @@
 
 This guide shows how to take the sample `SimpleLayout` project and add a `SimpleComponent` to the layout. In nsquared dashboard, the layout is the host and the component is the reusable visual element that gets added to the layout's `Components` list.
 
+This assumes you have already followed these two guides:
+[Building a layout](/Docs/Layouts/Building%20a%20Layout.md)
+and 
+[Building a Component](/Docs/Components/Building%20a%20Component.md)
+
 ## Start from the sample layout
 
 The sample layout already follows the correct pattern:
@@ -42,7 +47,6 @@ Update the `Load()` method so it adds the `SimpleComponent` alongside the backgr
 
 ```cs
 using nsquared.dashboard.api;
-using SimpleComponent;
 
 namespace SimpleLayout;
 
@@ -64,12 +68,12 @@ This tells the dashboard to instantiate both visual elements when the layout loa
 
 ## Example component metadata
 
-Your component should implement `IComponent` and describe where it should appear on the screen.
+Your component should implement `IComponent` and describe where it should appear on the screen. This is done in a class that references the actual SimpleComponent [built in this tutorial](/Docs/Components/Building%20a%20Component.md).
 
 ```cs
 using nsquared.dashboard.api;
 
-namespace SimpleComponent;
+namespace SimpleLayout;
 
 public class SimpleComponent : IComponent
 {
@@ -129,7 +133,7 @@ From a terminal, build the layout project:
 dotnet build
 ```
 
-Then load the resulting layout in the nsquared dashboard application and verify that the `SimpleComponent` appears in the layout alongside the background.
+Then load the resulting layout in the nsquared dashboard application and verify that the `SimpleComponent` appears in the layout on top of the background.
 
 ---
 
