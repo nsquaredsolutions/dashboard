@@ -3,9 +3,9 @@
 This guide shows how to take the sample `SimpleLayout` project and add a `SimpleComponent` to the layout. In nsquared dashboard, the layout is the host and the component is the reusable visual element that gets added to the layout's `Components` list.
 
 This assumes you have already followed these two guides:
-[Building a layout](/Docs/Layouts/Building%20a%20Layout.md)
+[Building a layout](/Docs/Layouts/Building%20a%20Layout)
 and 
-[Building a Component](/Docs/Components/Building%20a%20Component.md)
+[Building a Component](/Docs/Components/Building%20a%20Component)
 
 ## Start from the sample layout
 
@@ -57,7 +57,7 @@ This tells the dashboard to instantiate both visual elements when the layout loa
 
 ## Example component metadata
 
-Your component should implement `IComponent` and describe where it should appear on the screen. This is done in a new class in this layout project that references the actual SimpleComponent [built in this tutorial](/Docs/Components/Building%20a%20Component.md).
+Your component should implement `IComponent` and describe where it should appear on the screen. This is done in a new class in this layout project that references the actual SimpleComponent [built in this tutorial](/Docs/Components/Building%20a%20Component).
 
 ```cs
 using nsquared.dashboard.api;

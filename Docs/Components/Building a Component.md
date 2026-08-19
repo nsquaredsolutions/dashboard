@@ -181,7 +181,7 @@ Once the `.Component` file is built, add it to the dashboard using the same comp
 
 Then add that component to a layout and verify the visual result.
 
-[Information on hosting a component in a layout](/Docs/Layouts/Hosting%20a%20Component%20in%20a%20Layout.md)
+[Information on hosting a component in a layout](/Docs/Layouts/Hosting%20a%20Component%20in%20a%20Layout)
 
 ### 6. Tips and Best Practices
 
@@ -194,4 +194,4 @@ Then add that component to a layout and verify the visual result.
 
 [For more information on building a layout](/Docs/Layouts/Building%20a%20Layout)
 
-[Information on hosting a component in a layout](/Docs/Layouts/Hosting%20a%20Component%20in%20a%20Layout.md)
+[Information on hosting a component in a layout](/Docs/Layouts/Hosting%20a%20Component%20in%20a%20Layout)
