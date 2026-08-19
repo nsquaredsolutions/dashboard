@@ -13,7 +13,7 @@ This guide will walk you through the process of creating your own layout for the
 
 - Create a new folder for your layout
 - Add a new Class Library project (e.g., `SimpleLayout`)
-- Reference `nsquared.dashboard.api` nuget package in your project
+- Reference `nsquared.dashboard.api` NuGet package in your project
 - Add Avalonia NuGet package
 
 1. Start by creating a new C# class library project named SimpleLayout.
@@ -230,4 +230,4 @@ The new layout should now be displayed in the dashboard.
 
 ---
 
-For information on building a component to host in your layout read [creating your own components](/Docs/Components/Building%20a%20Component)
+For information on building a component to host in your layout read [creating your own components](../Components/Building%20a%20Component)
