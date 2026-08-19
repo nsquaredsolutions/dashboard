@@ -30,17 +30,6 @@ public class Layout : ILayout
 
 This is the key idea: a layout owns a list of `IComponent` objects and fills that list in its `Load()` method.
 
-## Add the component namespace
-
-If your component is in a separate assembly, add the namespace reference at the top of the layout file.
-
-```cs
-using nsquared.dashboard.api;
-using SimpleComponent;
-```
-
-If the component is in the same project, you can skip the `using` and reference the class directly.
-
 ## Add the component to the layout
 
 Update the `Load()` method so it adds the `SimpleComponent` alongside the background component.
@@ -68,7 +57,7 @@ This tells the dashboard to instantiate both visual elements when the layout loa
 
 ## Example component metadata
 
-Your component should implement `IComponent` and describe where it should appear on the screen. This is done in a class that references the actual SimpleComponent [built in this tutorial](/Docs/Components/Building%20a%20Component.md).
+Your component should implement `IComponent` and describe where it should appear on the screen. This is done in a new class in this layout project that references the actual SimpleComponent [built in this tutorial](/Docs/Components/Building%20a%20Component.md).
 
 ```cs
 using nsquared.dashboard.api;
@@ -78,8 +67,8 @@ namespace SimpleLayout;
 public class SimpleComponent : IComponent
 {
     public string AssemblyFile => "SimpleComponent.Component";
-    public string TypeName => "SimpleComponent.SimpleComponentControl";
-    public string Name { get; } = "Simple Component";
+    public string TypeName => "SimpleComponent.ClockComponentControl";
+    public string Name { get; } = "Clock";
     public ComponentMargin Margin { get; set; }
     public ComponentSize Size { get; set; }
     public ComponentVerticalAlignment VerticalAlignment { get; set; }
@@ -89,7 +78,7 @@ public class SimpleComponent : IComponent
     public SimpleComponent()
     {
         VerticalAlignment = ComponentVerticalAlignment.Center;
-        HorizontalAlignment = ComponentHorizontalAlignment.Right;
+        HorizontalAlignment = ComponentHorizontalAlignment.Center;
         Margin = new ComponentMargin
         {
             Top = 40,

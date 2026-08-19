@@ -19,15 +19,15 @@ public class ClockComponent : IComponent
         HorizontalAlignment = ComponentHorizontalAlignment.Center;
         Margin = new ComponentMargin
         {
-            Top = 12,
-            Left = 12,
-            Bottom = 12,
-            Right = 12
+            Top = 0,
+            Left = 0,
+            Bottom = 0,
+            Right = 0
         };
         Size = new ComponentSize
         {
-            Width = 320,
-            Height = 160
+            Width = double.NaN, // Auto width
+            Height = double.NaN // Auto height
         };
     }
 }
