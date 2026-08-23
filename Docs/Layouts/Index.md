@@ -16,6 +16,12 @@ The layouts on this page have been built by nsquared and digitally signed so you
 
 > Note: to see the clocks in the world map you will need to install the [Clocks component](../Components/Index)
 
+## Music Player
+
+> [Download Music Player Installer](https://nsquaredorders.blob.core.windows.net/downloads/nsquared.musicplayer.installer.msi)
+
+> The Music Player scene installer adds the player experience shown in the dashboard screenshots, including the music controls, album art, and volume controls.
+
 
 [Information on creating your own layouts](./Building%20a%20Layout)
 
