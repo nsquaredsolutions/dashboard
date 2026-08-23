@@ -18,6 +18,8 @@ The layouts on this page have been built by nsquared and digitally signed so you
 
 ## Music Scene
 
+### NOTE: Windows only right now
+
 > [Download Music Scene Installer](https://nsquaredorders.blob.core.windows.net/downloads/nsquared.musicplayer.installer.msi)
 
 [![Music Scene Layout](../images/MusicScene.png)](https://nsquaredorders.blob.core.windows.net/downloads/nsquared.musicplayer.installer.msi)
